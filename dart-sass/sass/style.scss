@@ -87,21 +87,23 @@ header {
           padding-top: 0.2rem;
           padding-bottom: 8rem;
 
-}
 
-.restaurant-search h1 {
-           @include title-style;
-           margin: 6rem 9rem 3rem;
-         }  
+
+                  .restaurant-search__h1 {
+                     @include title-style;
+                     margin: 6rem 9rem 3rem;
+                   
   
                   
                   
-.restaurant-search p {
-                         font-family: $font-family-general;
-                         font-size: 2rem;
-                         color: #353535;
-                         margin-bottom: 4rem;
-                      }                
+                     .restaurant-search__p {
+                        font-family: $font-family-general;
+                        font-size: 2rem;
+                        color: #353535;
+                        margin-bottom: 4rem;
+                    }
+                }
+}
   
 .buttonSearch {
     text-align: center;
