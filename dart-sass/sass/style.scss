@@ -3,9 +3,9 @@
 $font-family-general: 'Roboto', sans-serif;
 
 :root {
-    --main-color: #9356dc;
-    --second-color: #ff79da;
-    --main-bg-color: #F6F6F6;
+  --main-color: #9356dc;
+  --second-color: #ff79da;
+  --main-bg-color: #F6F6F6;
 }
 
 @mixin title-style {
@@ -13,109 +13,111 @@ $font-family-general: 'Roboto', sans-serif;
   font-family: $font-family-general;
 }
 
+@mixin display-style {
+  display: flexbox;
+  justify-content: center;
+}
+
 
 /******Header*********/
 
 body {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 0;
- 
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+
 }
 
 .main-container {
   box-sizing: border-box;
   width: 100%;
-  
+
 }
 
 
 header {
-       display: flex;
-       justify-content: center;
-       flex-direction: column;
-       margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 3rem;
 
-        & .img {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-bottom: 4rem;
-        }   
-}      
-          
+  & .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+}
+
 .search-bar {
-            font-family: $font-family-general;
-            display: flex;
-            justify-content: center;
-            height: 8.5rem;
-            background-color: #EAEAEA;
-            box-shadow:6px 6px 25px rgba(0, 0, 0, 0.5);
-
-
+  font-family: $font-family-general;
+  display: flex;
+  justify-content: center;
+  height: 8.5rem;
+  background-color: #EAEAEA;
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
 }
-          
+
 .myform {
-        display: flex;
-        align-items: center;
-        margin-left: 11rem;
-        
-        
-       
-        & .location { 
-                font-family: $font-family-general;
-                font-size: 2.5rem;
-                font-weight: bold;
-                background-color: #EAEAEA;
-                color:#353535;
-                border: none;
-                margin-left: 1rem;
-              }
-       
+  display: flex;
+  align-items: center;
+  margin-left: 11rem;
+
+
+
+  & .location {
+    font-family: $font-family-general;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background-color: #EAEAEA;
+    color: #353535;
+    border: none;
+    margin-left: 1rem;
+  }
+
+
+
+  & .fa-location-dot {
+    font-size: 2.5rem;
+    color: #353535;
+  }
 }
 
-.fa-location-dot {
-  font-size: 2.5rem;
-  color: #353535;
-} 
- 
 
 .restaurant-search {
-          text-align: center;
-          background-color: var(--main-bg-color);
-          padding-top: 0.2rem;
-          padding-bottom: 8rem;
+  text-align: center;
+  background-color: var(--main-bg-color);
+  padding-top: 0.2rem;
+  padding-bottom: 8rem;
 
 
 
-                  .restaurant-search__h1 {
-                     @include title-style;
-                     margin: 6rem 9rem 3rem;
-                   
-  
-                  
-                  
-                     .restaurant-search__p {
-                        font-family: $font-family-general;
-                        font-size: 2rem;
-                        color: #353535;
-                        margin-bottom: 4rem;
-                    }
-                }
+  .restaurant-search__h1 {
+    @include title-style;
+    margin: 6rem 9rem 3rem;
+  }
+
+
+  .restaurant-search__p {
+    font-family: $font-family-general;
+    font-size: 2rem;
+    color: #353535;
+    margin-bottom: 4rem;
+  }
 }
-  
+
 .buttonSearch {
-    text-align: center;
-    height: 9rem;
-    width: 35rem;
-    font-size: 2.5rem;
-    color: white;
-    background: linear-gradient(193.33deg,#FF79DA -11.44%, #9356DC 123.93%);
-    border-radius: 100px;
-    cursor: pointer; 
-    border: none;
-    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  height: 9rem;
+  width: 35rem;
+  font-size: 2.5rem;
+  color: white;
+  background: linear-gradient(193.33deg, #FF79DA -11.44%, #9356DC 123.93%);
+  border-radius: 100px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
 }
 
 .different-steps h1 {
@@ -130,7 +132,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  
+
 }
 
 .btn-step {
@@ -141,24 +143,24 @@ header {
   font-size: 2.5rem;
   border-radius: 50px;
   background-color: #F6F6F6;
-  box-shadow: 6px 6px 25px rgba(0,0,0,0.15);
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.15);
   border: none;
   cursor: pointer;
 }
 
 
 .fa-solid.fa-mobile-screen-button {
-  color:rgba(126, 126, 126, 1);
+  color: rgba(126, 126, 126, 1);
   font-size: 3rem;
   margin-right: 2.8rem;
 }
 
 .fa-solid.fa-list {
-  color:rgba(126, 126, 126, 1);
+  color: rgba(126, 126, 126, 1);
   font-size: 3rem;
   margin-right: 3.8rem;
 }
-  
+
 .fa-solid.fa-store {
   color: #9356DC;
   font-size: 3rem;
@@ -178,12 +180,13 @@ header {
   margin-bottom: 0rem;
 }
 
-.restaurant-cards  {
+.restaurant-cards {
   display: flex;
   flex-direction: column;
   width: 100%;
   box-sizing: border-box;
   background-color: #F6F6F6;
+  padding-bottom: 12rem;
 }
 
 .card-content {
@@ -195,10 +198,11 @@ header {
   width: 55rem;
   height: 41rem;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 50px;
   margin: 3rem;
+  margin-bottom: 0px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-} 
+}
 
 
 .restaurant-cards img {
@@ -222,5 +226,44 @@ header {
   color: #353535;
   margin-left: 2rem;
   margin-top: 0rem;
+}
+
+/***********Footer************/
+
+
+
+.footer-info {
+  background-color: #353535;
+  
+  img {
+    width: 16rem;
+    filter: brightness(100);
+    font-size: 4rem;
+    padding: 4rem 4rem 0rem;
+  }
+
+}
+
+.footer-info ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 2.4rem;
+  list-style-type: none;
+  padding: 0rem 0rem 4rem 4rem;
+  margin-bottom: 0;
+
+}
+
+.footer-info a {
+  color: white;
+  text-decoration: none;
+  font-family: $font-family-general;
+}
+
+.footer-info .fa-solid {
+  color: white;
+  padding-right: 2rem;
+
 }
 
