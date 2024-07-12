@@ -6,6 +6,7 @@ $font-family-general: 'Roboto', sans-serif;
   --main-color: #9356dc;
   --second-color: #ff79da;
   --main-bg-color: #F6F6F6;
+  --text-color-grey: #353535;
 }
 
 @mixin title-style {
@@ -22,8 +23,7 @@ $font-family-general: 'Roboto', sans-serif;
 /******Header*********/
 
 body {
-  display: flex;
-  justify-content: center;
+  @include display-style;
   width: 100%;
   margin: 0;
 
@@ -37,14 +37,12 @@ body {
 
 
 header {
-  display: flex;
-  justify-content: center;
+  @include display-style;
   flex-direction: column;
   margin-top: 3rem;
 
   & .img {
-    display: flex;
-    justify-content: center;
+    @include display-style;
     align-items: center;
     margin-bottom: 4rem;
   }
@@ -52,8 +50,7 @@ header {
 
 .search-bar {
   font-family: $font-family-general;
-  display: flex;
-  justify-content: center;
+  @include display-style;
   height: 8.5rem;
   background-color: #EAEAEA;
   box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
@@ -71,7 +68,7 @@ header {
     font-size: 2.5rem;
     font-weight: bold;
     background-color: #EAEAEA;
-    color: #353535;
+    color: var(text-color-grey);
     border: none;
     margin-left: 1rem;
   }
@@ -80,7 +77,7 @@ header {
 
   & .fa-location-dot {
     font-size: 2.5rem;
-    color: #353535;
+    color: var(--text-color-grey);
   }
 }
 
@@ -93,16 +90,16 @@ header {
 
 
 
-  .restaurant-search__h1 {
+  & h1 {
     @include title-style;
     margin: 6rem 9rem 3rem;
   }
 
 
-  .restaurant-search__p {
+  & p {
     font-family: $font-family-general;
     font-size: 2rem;
-    color: #353535;
+    color: var(--text-color-grey);
     margin-bottom: 4rem;
   }
 }
@@ -142,7 +139,7 @@ header {
   font-weight: bold;
   font-size: 2.5rem;
   border-radius: 50px;
-  background-color: #F6F6F6;
+  background-color: var(--main-bg-color);
   box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.15);
   border: none;
   cursor: pointer;
@@ -162,7 +159,7 @@ header {
 }
 
 .fa-solid.fa-store {
-  color: #9356DC;
+  color: var(--main-color);
   font-size: 3rem;
   margin-right: 3rem;
 }
@@ -180,13 +177,41 @@ header {
   margin-bottom: 0rem;
 }
 
+/***********Restaurant Cards**********/
+
+.card-link {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-decoration-line: none;
+}
+
 .restaurant-cards {
   display: flex;
   flex-direction: column;
   width: 100%;
   box-sizing: border-box;
-  background-color: #F6F6F6;
+  background-color: var(--main-bg-color);
   padding-bottom: 12rem;
+}
+
+.newBadge {
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: $font-family-general;
+  color: rgba(0, 135, 102, 1);
+  text-align: center;
+  background-size: 5rem 2rem;
+  background-color: rgba(153, 226, 208, 1);
+  padding: 1rem;
+  border-radius: 4px;
+
+
 }
 
 .card-content {
@@ -223,7 +248,7 @@ header {
 .restaurant p {
   font-family: $font-family-general;
   font-size: 3rem;
-  color: #353535;
+  color: var(--text-color-grey);
   margin-left: 2rem;
   margin-top: 0rem;
 }
@@ -233,8 +258,8 @@ header {
 
 
 .footer-info {
-  background-color: #353535;
-  
+  background-color: var(--text-color-grey);
+
   img {
     width: 16rem;
     filter: brightness(100);
@@ -266,4 +291,3 @@ header {
   padding-right: 2rem;
 
 }
-

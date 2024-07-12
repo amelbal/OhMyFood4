@@ -3,11 +3,12 @@
   --main-color: #9356dc;
   --second-color: #ff79da;
   --main-bg-color: #F6F6F6;
+  --text-color-grey: #353535;
 }
 
 /******Header*********/
 body {
-  display: flex;
+  display: flexbox;
   justify-content: center;
   width: 100%;
   margin: 0;
@@ -19,13 +20,13 @@ body {
 }
 
 header {
-  display: flex;
+  display: flexbox;
   justify-content: center;
   flex-direction: column;
   margin-top: 3rem;
 }
 header .img {
-  display: flex;
+  display: flexbox;
   justify-content: center;
   align-items: center;
   margin-bottom: 4rem;
@@ -33,7 +34,7 @@ header .img {
 
 .search-bar {
   font-family: "Roboto", sans-serif;
-  display: flex;
+  display: flexbox;
   justify-content: center;
   height: 8.5rem;
   background-color: #EAEAEA;
@@ -50,13 +51,13 @@ header .img {
   font-size: 2.5rem;
   font-weight: bold;
   background-color: #EAEAEA;
-  color: #353535;
+  color: var(text-color-grey);
   border: none;
   margin-left: 1rem;
 }
 .myform .fa-location-dot {
   font-size: 2.5rem;
-  color: #353535;
+  color: var(--text-color-grey);
 }
 
 .restaurant-search {
@@ -65,15 +66,15 @@ header .img {
   padding-top: 0.2rem;
   padding-bottom: 8rem;
 }
-.restaurant-search .restaurant-search__h1 {
+.restaurant-search h1 {
   font-size: 4rem;
   font-family: "Roboto", sans-serif;
   margin: 6rem 9rem 3rem;
 }
-.restaurant-search .restaurant-search__p {
+.restaurant-search p {
   font-family: "Roboto", sans-serif;
   font-size: 2rem;
-  color: #353535;
+  color: var(--text-color-grey);
   margin-bottom: 4rem;
 }
 
@@ -111,7 +112,7 @@ header .img {
   font-weight: bold;
   font-size: 2.5rem;
   border-radius: 50px;
-  background-color: #F6F6F6;
+  background-color: var(--main-bg-color);
   box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.15);
   border: none;
   cursor: pointer;
@@ -130,7 +131,7 @@ header .img {
 }
 
 .fa-solid.fa-store {
-  color: #9356DC;
+  color: var(--main-color);
   font-size: 3rem;
   margin-right: 3rem;
 }
@@ -149,13 +150,38 @@ header .img {
   margin-bottom: 0rem;
 }
 
+/***********Restaurant Cards**********/
+.card-link {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-decoration-line: none;
+}
+
 .restaurant-cards {
   display: flex;
   flex-direction: column;
   width: 100%;
   box-sizing: border-box;
-  background-color: #F6F6F6;
+  background-color: var(--main-bg-color);
   padding-bottom: 12rem;
+}
+
+.newBadge {
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  color: rgb(0, 135, 102);
+  text-align: center;
+  background-size: 5rem 2rem;
+  background-color: rgb(153, 226, 208);
+  padding: 1rem;
+  border-radius: 4px;
 }
 
 .card-content {
@@ -191,14 +217,14 @@ header .img {
 .restaurant p {
   font-family: "Roboto", sans-serif;
   font-size: 3rem;
-  color: #353535;
+  color: var(--text-color-grey);
   margin-left: 2rem;
   margin-top: 0rem;
 }
 
 /***********Footer************/
 .footer-info {
-  background-color: #353535;
+  background-color: var(--text-color-grey);
 }
 .footer-info img {
   width: 16rem;

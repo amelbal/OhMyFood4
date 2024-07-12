@@ -1,0 +1,171 @@
+/****** General ***********/
+
+$font-family-general: 'Roboto', sans-serif;
+
+:root {
+    --main-color: #9356dc;
+    --second-color: #ff79da;
+    --main-bg-color: #F6F6F6;
+    --text-color-grey: #353535;
+}
+
+@mixin title-style {
+    font-size: 4rem;
+    font-family: $font-family-general;
+}
+
+@mixin display-style {
+    display: flexbox;
+    justify-content: center;
+}
+
+
+/******Header*********/
+
+body {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+
+}
+
+.main-container {
+    box-sizing: border-box;
+    width: 100%;
+
+}
+
+
+header {
+
+    display: flex;
+    gap: 9rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+
+    & .img {
+        display: flex;
+        justify-content: center;
+    }
+
+    & .homepage {
+        border: none;
+        margin-left: 4rem;
+        background-color: white;
+        cursor: pointer;
+
+
+    }
+
+}
+
+.fa-solid.fa-arrow-left {
+    color: rgba(53, 53, 53, 1);
+    font-size: 4rem;
+
+
+}
+
+.background-img {
+    width: 100%;
+    height: 45rem;
+    object-fit: cover;
+}
+
+/**************SECTION_MENU************/
+
+.menu-card {
+    width: 100%;
+    height: 200rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(246, 246, 246, 1);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    & h1 {
+        font-family: "Shrikhand", serif;
+        font-size: 4rem;
+        margin-left: 2rem;
+    }
+
+
+    & h2 {
+        font-family: $font-family-general;
+        font-size: 2.5rem;
+        font-weight: normal;
+        margin-left: 2rem;
+        border-bottom-style: solid;
+        border-color: rgba(153, 226, 208, 1);
+        border-width: 8px;
+    }
+
+    & .entries {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        padding-left: 3%;
+        padding-right: 3%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+
+}
+
+.plates {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: 1rem;
+    margin-bottom: 6rem;
+
+}
+
+.choice-your-meal {
+
+    width: 100%;
+    height: 12rem;
+    font-weight: bold;
+    font-size: 2.5rem;
+    border-radius: 50px;
+    box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 1);
+    border: none;
+    cursor: pointer;
+
+    & h3 {
+        font-size: 2.5rem;
+        font-family: $font-family-general;
+    }
+
+
+    & p {
+        font-family: $font-family-general;
+        font-size: 2rem;
+        font-weight: normal;
+
+    }
+}
+
+.entrie-and-price {
+    display: flex;
+    flex-direction: column;
+
+    & .entrieName {
+        width: 85%;
+    }
+
+
+    & .price {
+        width: 15%;
+        color: rgba(53, 53, 53, 1);
+    }
+}
