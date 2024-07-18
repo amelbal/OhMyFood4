@@ -8,7 +8,7 @@
 
 /******Header*********/
 body {
-  display: flexbox;
+  display: flex;
   justify-content: center;
   width: 100%;
   margin: 0;
@@ -20,13 +20,13 @@ body {
 }
 
 header {
-  display: flexbox;
+  display: flex;
   justify-content: center;
   flex-direction: column;
   margin-top: 3rem;
 }
 header .img {
-  display: flexbox;
+  display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 4rem;
@@ -34,7 +34,7 @@ header .img {
 
 .search-bar {
   font-family: "Roboto", sans-serif;
-  display: flexbox;
+  display: flex;
   justify-content: center;
   height: 8.5rem;
   background-color: #EAEAEA;
@@ -78,7 +78,7 @@ header .img {
   margin-bottom: 4rem;
 }
 
-.buttonSearch {
+.buttonRestaurant {
   text-align: center;
   height: 9rem;
   width: 35rem;
@@ -118,6 +118,32 @@ header .img {
   cursor: pointer;
 }
 
+.numberBadge1,
+.numberBadge2,
+.numberBadge3 {
+  position: absolute;
+  left: 3rem;
+  font-size: 2.2rem;
+  font-weight: normal;
+  line-height: 20px;
+  color: white;
+  background-color: var(--main-color);
+  padding: 20px;
+  border-radius: 100px;
+}
+
+.numberBadge1 {
+  top: 84rem;
+}
+
+.numberBadge2 {
+  top: 100rem;
+}
+
+.numberBadge3 {
+  top: 116rem;
+}
+
 .fa-solid.fa-mobile-screen-button {
   color: rgb(126, 126, 126);
   font-size: 3rem;
@@ -152,7 +178,6 @@ header .img {
 
 /***********Restaurant Cards**********/
 .card-link {
-  position: absolute;
   top: auto;
   bottom: 0;
   left: 0;

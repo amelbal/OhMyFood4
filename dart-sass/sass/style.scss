@@ -15,7 +15,7 @@ $font-family-general: 'Roboto', sans-serif;
 }
 
 @mixin display-style {
-  display: flexbox;
+  display: flex;
   justify-content: center;
 }
 
@@ -104,7 +104,7 @@ header {
   }
 }
 
-.buttonSearch {
+.buttonRestaurant {
   text-align: center;
   height: 9rem;
   width: 35rem;
@@ -145,6 +145,35 @@ header {
   cursor: pointer;
 }
 
+.numberBadge1,
+.numberBadge2,
+.numberBadge3 {
+
+  position: absolute;
+  left: 3rem;
+  font-size: 2.2rem;
+  font-weight: normal;
+  line-height: 20px;
+  color: white;
+  background-color: var(--main-color);
+  padding: 20px;
+  border-radius: 100px;
+
+
+}
+
+.numberBadge1 {
+  top: 84rem;
+}
+
+.numberBadge2 {
+  top: 100rem;
+}
+
+.numberBadge3 {
+  top: 116rem;
+}
+
 
 .fa-solid.fa-mobile-screen-button {
   color: rgba(126, 126, 126, 1);
@@ -180,7 +209,6 @@ header {
 /***********Restaurant Cards**********/
 
 .card-link {
-  position: absolute;
   top: auto;
   bottom: 0;
   left: 0;
