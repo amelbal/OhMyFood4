@@ -71,11 +71,11 @@ header .homepage {
   border-bottom-style: solid;
   border-color: rgb(153, 226, 208);
   border-width: 8px;
+  border: 10%;
 }
 .menu-card .entries, .menu-card .plates, .menu-card .desserts {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 2rem;
   padding-left: 3%;
   padding-right: 3%;
@@ -118,7 +118,9 @@ header .homepage {
 .entrie-and-price .price, .plate-and-price .price, .dessert-and-price .price {
   width: 10%;
   color: rgb(53, 53, 53);
-  margin-top: 5.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
 .buttonRestaurant {

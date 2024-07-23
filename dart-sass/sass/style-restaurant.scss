@@ -100,13 +100,13 @@ header {
         border-bottom-style: solid;
         border-color: rgba(153, 226, 208, 1);
         border-width: 8px;
+        border: 10%;
     }
 
     & .entries, .plates, .desserts {
 
         display: flex;
         flex-direction: column;
-        justify-content: center;
         gap: 2rem;
         padding-left: 3%;
         padding-right: 3%;
@@ -159,7 +159,9 @@ header {
     & .price {
         width: 10%;
         color: rgba(53, 53, 53, 1);
-        margin-top: 5.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
 
     }
 }
