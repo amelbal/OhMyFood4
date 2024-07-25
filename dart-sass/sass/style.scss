@@ -1,12 +1,17 @@
 /****** General ***********/
 
 $font-family-general: 'Roboto', sans-serif;
+$btn-gradiant: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+
+
 
 :root {
   --main-color: #9356dc;
   --second-color: #ff79da;
   --main-bg-color: #F6F6F6;
   --text-color-grey: #353535;
+  --light-green:#99E2D0;
+
 }
 
 @mixin title-style {
@@ -19,6 +24,24 @@ $font-family-general: 'Roboto', sans-serif;
   justify-content: center;
 }
 
+@mixin btn-style {
+  text-align: center;
+  height: 9rem;
+  width: 35rem;
+  font-size: 2.5rem;
+  color: white;
+  background: $btn-gradiant;
+  border-radius: 100px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.6);
+    opacity: 0.8;
+  }
+
+}
 
 /******Header*********/
 
@@ -105,16 +128,7 @@ header {
 }
 
 .buttonRestaurant {
-  text-align: center;
-  height: 9rem;
-  width: 35rem;
-  font-size: 2.5rem;
-  color: white;
-  background: linear-gradient(193.33deg, #FF79DA -11.44%, #9356DC 123.93%);
-  border-radius: 100px;
-  cursor: pointer;
-  border: none;
-  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+  @include btn-style;
 }
 
 .different-steps h1 {
@@ -232,12 +246,12 @@ header {
   font-size: 2.5rem;
   font-weight: bold;
   font-family: $font-family-general;
-  color: rgba(0, 135, 102, 1);
+  color: rgba(0, 135, 102, 1); 
   text-align: center;
   background-size: 5rem 2rem;
-  background-color: rgba(153, 226, 208, 1);
-  padding: 1rem;
+  background-color: var(--light-green);
   border-radius: 4px;
+  padding: 1rem;
 
 
 }
@@ -284,47 +298,46 @@ header {
 
 .iconLike {
   width: 50%;
-  position: relative;
   border: none;
   display: flex;
   align-content: center;
   align-items: center;
   justify-content: flex-end;
 
-
-  & .emptyHeart {
+  & .btn-like {
     border: none;
     background-color: white;
     font-size: 3.8rem;
     cursor: pointer;
-    position: absolute;
     margin-right: 4rem;
-  }
 
 
-  & .fullHeart {
 
-    border: none;
-    font-size: 3.8rem;
-    background-color: white;
-    opacity: 0;
-    margin-right: 4rem;
-    overflow: hidden;
-    transition: all 2s linear 0s;
-   
+    & .fa-regular.fa-heart {
+
+      position: absolute;
+
+    }
 
 
-    & :hover {
-      opacity: 1;
-      background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
+    & .fa-solid.fa-heart {
+      opacity: 0;
+      transition: all 1.5s ease 0s;
+      
+
+
+      &:hover {
+        opacity: 1;
+        background: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        color: transparent;
+
+      }
 
     }
 
   }
-
 }
 
 /***********Footer************/

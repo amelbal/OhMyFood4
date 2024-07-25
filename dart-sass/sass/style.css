@@ -4,6 +4,7 @@
   --second-color: #ff79da;
   --main-bg-color: #F6F6F6;
   --text-color-grey: #353535;
+  --light-green:#99E2D0;
 }
 
 /******Header*********/
@@ -84,11 +85,15 @@ header .img {
   width: 35rem;
   font-size: 2.5rem;
   color: white;
-  background: linear-gradient(193.33deg, #FF79DA -11.44%, #9356DC 123.93%);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   border-radius: 100px;
   cursor: pointer;
   border: none;
-  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.3);
+}
+.buttonRestaurant:hover {
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.6);
+  opacity: 0.8;
 }
 
 .different-steps h1 {
@@ -204,9 +209,9 @@ header .img {
   color: rgb(0, 135, 102);
   text-align: center;
   background-size: 5rem 2rem;
-  background-color: rgb(153, 226, 208);
-  padding: 1rem;
+  background-color: var(--light-green);
   border-radius: 4px;
+  padding: 1rem;
 }
 
 .card-content {
@@ -250,34 +255,30 @@ header .img {
 
 .iconLike {
   width: 50%;
-  position: relative;
   border: none;
   display: flex;
   align-content: center;
   align-items: center;
   justify-content: flex-end;
 }
-.iconLike .emptyHeart {
+.iconLike .btn-like {
   border: none;
   background-color: white;
   font-size: 3.8rem;
   cursor: pointer;
+  margin-right: 4rem;
+}
+.iconLike .btn-like .fa-regular.fa-heart {
   position: absolute;
-  margin-right: 4rem;
 }
-.iconLike .fullHeart {
-  border: none;
-  font-size: 3.8rem;
-  background-color: white;
+.iconLike .btn-like .fa-solid.fa-heart {
   opacity: 0;
-  margin-right: 4rem;
-  overflow: hidden;
-  transition: all 2s linear 0s;
+  transition: all 1.5s ease 0s;
 }
-.iconLike .fullHeart :hover {
+.iconLike .btn-like .fa-solid.fa-heart:hover {
   opacity: 1;
-  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  background-clip: text;
+  background: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: border-box;
   -webkit-background-clip: text;
   color: transparent;
 }

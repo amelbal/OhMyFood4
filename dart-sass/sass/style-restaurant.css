@@ -4,6 +4,7 @@
   --second-color: #ff79da;
   --main-bg-color: #F6F6F6;
   --text-color-grey: #353535;
+  --light-green: #99E2D0;
 }
 
 /******Header*********/
@@ -73,7 +74,9 @@ header .homepage {
   border-width: 8px;
   border: 10%;
 }
-.menu-card .entries, .menu-card .plates, .menu-card .desserts {
+.menu-card .entries,
+.menu-card .plates,
+.menu-card .desserts {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -83,9 +86,30 @@ header .homepage {
   margin-bottom: 6rem;
 }
 
+.entries {
+  animation: apparition 400ms ease in;
+}
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(1);
+  }
+}
+
+.plates {
+  animation: appariton 600ms ease in;
+}
+
+.desserts {
+  animation: apparition 800ms ease in;
+}
+
 .choice-your-meal {
   width: 100%;
-  height: 12rem;
   font-weight: bold;
   font-size: 2.5rem;
   border-radius: 50px;
@@ -94,6 +118,7 @@ header .homepage {
   border: none;
   cursor: pointer;
   text-align: left;
+  padding: 0;
 }
 .choice-your-meal h3 {
   font-size: 3rem;
@@ -107,20 +132,51 @@ header .homepage {
   margin: 0;
 }
 
-.entrie-and-price, .plate-and-price, .dessert-and-price {
+.entrie-and-price,
+.plate-and-price,
+.dessert-and-price {
   display: flex;
 }
-.entrie-and-price .entrieName, .entrie-and-price .plateName, .entrie-and-price .dessertName, .plate-and-price .entrieName, .plate-and-price .plateName, .plate-and-price .dessertName, .dessert-and-price .entrieName, .dessert-and-price .plateName, .dessert-and-price .dessertName {
-  width: 90%;
+.entrie-and-price .entrieName,
+.entrie-and-price .plateName,
+.entrie-and-price .dessertName,
+.plate-and-price .entrieName,
+.plate-and-price .plateName,
+.plate-and-price .dessertName,
+.dessert-and-price .entrieName,
+.dessert-and-price .plateName,
+.dessert-and-price .dessertName {
+  width: 75%;
   margin-bottom: 2rem;
   margin-left: 2rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.entrie-and-price .price, .plate-and-price .price, .dessert-and-price .price {
+.entrie-and-price .price,
+.plate-and-price .price,
+.dessert-and-price .price {
   width: 10%;
   color: rgb(53, 53, 53);
   display: flex;
   flex-wrap: wrap;
   align-content: center;
+}
+
+.confirm-your-choice {
+  display: none;
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--light-green);
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+  align-items: center;
+  border-radius: 0 50px 50px 0;
+}
+.confirm-your-choice :hover .fa-solid.fa-circle-check {
+  display: inline;
 }
 
 .buttonRestaurant {
@@ -129,12 +185,16 @@ header .homepage {
   width: 35rem;
   font-size: 2.5rem;
   color: white;
-  background: linear-gradient(193.33deg, #FF79DA -11.44%, #9356DC 123.93%);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   border-radius: 100px;
   cursor: pointer;
   border: none;
-  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.3);
   margin: 1rem 13rem 6rem;
+}
+.buttonRestaurant :hover {
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.6);
+  opacity: 0.8;
 }
 
 /***********Footer************/
