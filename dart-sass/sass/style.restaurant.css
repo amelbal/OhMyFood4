@@ -1,128 +1,77 @@
 /****** General ***********/
-
-$font-family-general: 'Roboto', sans-serif;
-$btn-gradiant: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-
-
-
 :root {
   --main-color: #9356dc;
   --second-color: #ff79da;
   --main-bg-color: #F6F6F6;
   --text-color-grey: #353535;
   --light-green: #99E2D0;
-
-}
-
-@mixin title-style {
-  font-size: 4rem;
-  font-family: $font-family-general;
-}
-
-@mixin display-style {
-  display: flex;
-  justify-content: center;
-}
-
-@mixin btn-style {
-  text-align: center;
-  height: 9rem;
-  width: 35rem;
-  font-size: 2.5rem;
-  color: white;
-  background: $btn-gradiant;
-  border-radius: 100px;
-  cursor: pointer;
-  border: none;
-  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.3);
-
-  &:hover {
-    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.6);
-    opacity: 0.8;
-  }
-
 }
 
 /******Header*********/
-
 body {
-  @include display-style;
+  display: flex;
+  justify-content: center;
   width: 100%;
   margin: 0;
-
 }
 
 .main-container {
   box-sizing: border-box;
   width: 100%;
-
 }
 
-//***loader***//
-
-
-svg {
-  font-family: "Roboto", sans-serif;
-  width: 100%;
-  height: 100%;
+.loader {
+  width: 35px;
+  height: 80px;
+  position: relative;
 }
 
-svg text {
-  animation: stroke 5s infinite alternate;
-  stroke-width: 2;
-  stroke: #9356DC;
-  font-size: 100px;
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px 5px;
+  border-top: 1px solid #bbb6aa;
+  border-bottom: 4px solid #bbb6aa;
+  background: linear-gradient(#612329 0 0) bottom no-repeat content-box, #e4e0d7;
+  mix-blend-mode: darken;
+  animation: l1 1.5s infinite linear;
 }
 
-@keyframes stroke {
+.loader:before {
+  content: "";
+  position: absolute;
+  inset: -18px calc(50% - 2px) 8px;
+  background: #eb6b3e;
+  transform-origin: bottom;
+  transform: rotate(8deg);
+}
+
+@keyframes l1 {
   0% {
-    fill: rgba(255, 121, 218, 0);
-    stroke: rgba(147, 86, 220, 1);
-    stroke-dashoffset: 25%;
-    stroke-dasharray: 0 50%;
-    stroke-width: 2;
+    background-size: 100% 100%;
   }
-
-  70% {
-    fill: rgba(255, 121, 218, 0);
-    stroke: rgba(147, 86, 220, 1);
-  }
-
-  80% {
-    fill: rgba(255, 121, 218, 0);
-    stroke: rgba(147, 86, 220, 1);
-    stroke-width: 3;
-  }
-
   100% {
-    fill: rgba(255, 121, 218, 1);
-    stroke: rgba(147, 86, 220, 0);
-    stroke-dashoffset: -25%;
-    stroke-dasharray: 50% 0;
-    stroke-width: 0;
+    background-size: 100% 5%;
   }
 }
-
-.wrapper {
-  background-color: #F6F6F6;
-}
-
-
 header {
-  @include display-style;
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   margin-top: 3rem;
-
-  & .img {
-    @include display-style;
-    align-items: center;
-    margin-bottom: 4rem;
-  }
+}
+header .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
 }
 
 .search-bar {
-  font-family: $font-family-general;
-  @include display-style;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
   height: 8.5rem;
   background-color: #EAEAEA;
   box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
@@ -132,61 +81,61 @@ header {
   display: flex;
   align-items: center;
   margin-left: 11rem;
-
-
-
-  & .location {
-    font-family: $font-family-general;
-    font-size: 2.5rem;
-    font-weight: bold;
-    background-color: #EAEAEA;
-    color: var(text-color-grey);
-    border: none;
-    margin-left: 1rem;
-  }
-
-
-
-  & .fa-location-dot {
-    font-size: 2.5rem;
-    color: var(--text-color-grey);
-  }
 }
-
+.myform .location {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background-color: #EAEAEA;
+  color: var(text-color-grey);
+  border: none;
+  margin-left: 1rem;
+}
+.myform .fa-location-dot {
+  font-size: 2.5rem;
+  color: var(--text-color-grey);
+}
 
 .restaurant-search {
   text-align: center;
   background-color: var(--main-bg-color);
   padding-top: 0.2rem;
   padding-bottom: 8rem;
-
-
-
-  & h1 {
-    @include title-style;
-    margin: 6rem 9rem 3rem;
-  }
-
-
-  & p {
-    font-family: $font-family-general;
-    font-size: 2rem;
-    color: var(--text-color-grey);
-    margin-bottom: 4rem;
-  }
+}
+.restaurant-search h1 {
+  font-size: 4rem;
+  font-family: "Roboto", sans-serif;
+  margin: 6rem 9rem 3rem;
+}
+.restaurant-search p {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  color: var(--text-color-grey);
+  margin-bottom: 4rem;
 }
 
 .buttonRestaurant {
-  @include btn-style;
+  text-align: center;
+  height: 9rem;
+  width: 35rem;
+  font-size: 2.5rem;
+  color: white;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  border-radius: 100px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.3);
+}
+.buttonRestaurant:hover {
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.6);
+  opacity: 0.8;
 }
 
-.different-steps {
-
-  & h1 {
-    margin-top: 6rem;
-    margin-left: 3rem;
-    @include title-style;
-  }
+.different-steps h1 {
+  margin-top: 6rem;
+  margin-left: 3rem;
+  font-size: 4rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .buttonSteps {
@@ -194,7 +143,6 @@ header {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-
 }
 
 .btn-step {
@@ -213,9 +161,7 @@ header {
   cursor: pointer;
 }
 
-
 .numberBadge {
-
   position: relative;
   font-size: 2.2rem;
   font-weight: normal;
@@ -226,19 +172,16 @@ header {
   border-radius: 100px;
   width: 20px;
   right: 680px;
-
-
 }
 
-
 .fa-solid.fa-mobile-screen-button {
-  color: rgba(126, 126, 126, 1);
+  color: rgb(126, 126, 126);
   font-size: 3rem;
   margin-right: 2.8rem;
 }
 
 .fa-solid.fa-list {
-  color: rgba(126, 126, 126, 1);
+  color: rgb(126, 126, 126);
   font-size: 3rem;
   margin-right: 3.8rem;
 }
@@ -251,11 +194,12 @@ header {
 
 .restaurant {
   background-color: #f8f8f8;
-  margin-top: 8rem
+  margin-top: 8rem;
 }
 
 .restaurant h1 {
-  @include title-style;
+  font-size: 4rem;
+  font-family: "Roboto", sans-serif;
   margin-top: 12rem;
   padding-top: 8rem;
   margin-left: 3rem;
@@ -263,7 +207,6 @@ header {
 }
 
 /***********Restaurant Cards**********/
-
 .card-link {
   top: auto;
   bottom: 0;
@@ -287,15 +230,13 @@ header {
   right: 4rem;
   font-size: 2.5rem;
   font-weight: bold;
-  font-family: $font-family-general;
-  color: rgba(0, 135, 102, 1);
+  font-family: "Roboto", sans-serif;
+  color: rgb(0, 135, 102);
   text-align: center;
   background-size: 5rem 2rem;
   background-color: var(--light-green);
   border-radius: 4px;
   padding: 1rem;
-
-
 }
 
 .card-content {
@@ -314,7 +255,6 @@ header {
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
-
 .restaurant-cards img {
   width: 100%;
   height: 70%;
@@ -323,7 +263,7 @@ header {
 }
 
 .restaurant h2 {
-  font-family: $font-family-general;
+  font-family: "Roboto", sans-serif;
   font-size: 3.1rem;
   color: black;
   margin-left: 2rem;
@@ -331,7 +271,7 @@ header {
 }
 
 .restaurant p {
-  font-family: $font-family-general;
+  font-family: "Roboto", sans-serif;
   font-size: 3rem;
   color: var(--text-color-grey);
   margin-left: 2rem;
@@ -345,60 +285,41 @@ header {
   align-content: center;
   align-items: center;
   justify-content: flex-end;
-
-  & .btn-like {
-    border: none;
-    background-color: white;
-    font-size: 3.8rem;
-    cursor: pointer;
-    margin-right: 4rem;
-
-
-
-    & .fa-regular.fa-heart {
-
-      position: absolute;
-
-    }
-
-
-    & .fa-solid.fa-heart {
-      opacity: 0;
-      transition: all 1.5s ease 0s;
-
-
-
-      &:hover {
-        opacity: 1;
-        background: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
-        background-clip: border-box;
-        -webkit-background-clip: text;
-        color: transparent;
-        z-index: 2;
-        position: relative;
-        bottom: 3px;
-
-      }
-
-    }
-
-  }
+}
+.iconLike .btn-like {
+  border: none;
+  background-color: white;
+  font-size: 3.8rem;
+  cursor: pointer;
+  margin-right: 4rem;
+}
+.iconLike .btn-like .fa-regular.fa-heart {
+  position: absolute;
+}
+.iconLike .btn-like .fa-solid.fa-heart {
+  opacity: 0;
+  transition: all 1.5s ease 0s;
+}
+.iconLike .btn-like .fa-solid.fa-heart:hover {
+  opacity: 1;
+  background: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  color: transparent;
+  z-index: 2;
+  position: relative;
+  bottom: 3px;
 }
 
 /***********Footer************/
-
-
-
 .footer-info {
   background-color: var(--text-color-grey);
-
-  img {
-    width: 16rem;
-    filter: brightness(100);
-    font-size: 4rem;
-    padding: 4rem 4rem 0rem;
-  }
-
+}
+.footer-info img {
+  width: 16rem;
+  filter: brightness(100);
+  font-size: 4rem;
+  padding: 4rem 4rem 0rem;
 }
 
 .footer-info ul {
@@ -409,17 +330,17 @@ header {
   list-style-type: none;
   padding: 0rem 0rem 4rem 4rem;
   margin-bottom: 0;
-
 }
 
 .footer-info a {
   color: white;
   text-decoration: none;
-  font-family: $font-family-general;
+  font-family: "Roboto", sans-serif;
 }
 
 .footer-info .fa-solid {
   color: white;
   padding-right: 2rem;
-
 }
+
+/*# sourceMappingURL=style.restaurant.css.map */

@@ -4,7 +4,7 @@
   --second-color: #ff79da;
   --main-bg-color: #F6F6F6;
   --text-color-grey: #353535;
-  --light-green:#99E2D0;
+  --light-green: #99E2D0;
 }
 
 /******Header*********/
@@ -18,6 +18,48 @@ body {
 .main-container {
   box-sizing: border-box;
   width: 100%;
+}
+
+svg {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+svg text {
+  animation: stroke 5s infinite alternate;
+  stroke-width: 2;
+  stroke: #9356DC;
+  font-size: 100px;
+}
+
+@keyframes stroke {
+  0% {
+    fill: rgba(255, 121, 218, 0);
+    stroke: rgb(147, 86, 220);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+  70% {
+    fill: rgba(255, 121, 218, 0);
+    stroke: rgb(147, 86, 220);
+  }
+  80% {
+    fill: rgba(255, 121, 218, 0);
+    stroke: rgb(147, 86, 220);
+    stroke-width: 3;
+  }
+  100% {
+    fill: rgb(255, 121, 218);
+    stroke: rgba(147, 86, 220, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
+.wrapper {
+  background-color: #F6F6F6;
 }
 
 header {
@@ -111,6 +153,9 @@ header .img {
 }
 
 .btn-step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 52rem;
   height: 12rem;
   text-align: center;
@@ -123,11 +168,8 @@ header .img {
   cursor: pointer;
 }
 
-.numberBadge1,
-.numberBadge2,
-.numberBadge3 {
-  position: absolute;
-  left: 3rem;
+.numberBadge {
+  position: relative;
   font-size: 2.2rem;
   font-weight: normal;
   line-height: 20px;
@@ -135,18 +177,8 @@ header .img {
   background-color: var(--main-color);
   padding: 20px;
   border-radius: 100px;
-}
-
-.numberBadge1 {
-  top: 84rem;
-}
-
-.numberBadge2 {
-  top: 100rem;
-}
-
-.numberBadge3 {
-  top: 116rem;
+  width: 20px;
+  right: 680px;
 }
 
 .fa-solid.fa-mobile-screen-button {
@@ -281,6 +313,9 @@ header .img {
   background-clip: border-box;
   -webkit-background-clip: text;
   color: transparent;
+  z-index: 2;
+  position: relative;
+  bottom: 3px;
 }
 
 /***********Footer************/

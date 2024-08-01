@@ -63,8 +63,10 @@ header .homepage {
   font-family: "Shrikhand", serif;
   font-size: 4rem;
   margin-left: 2rem;
+  margin-right: 10rem;
 }
 .menu-card h2 {
+  width: 10%;
   font-family: "Roboto", sans-serif;
   font-size: 2.5rem;
   font-weight: normal;
@@ -72,7 +74,10 @@ header .homepage {
   border-bottom-style: solid;
   border-color: rgb(153, 226, 208);
   border-width: 8px;
-  border: 10%;
+}
+.menu-card .title-and-heart {
+  display: flex;
+  flex-direction: row;
 }
 .menu-card .entries,
 .menu-card .plates,
@@ -86,26 +91,69 @@ header .homepage {
   margin-bottom: 6rem;
 }
 
-.entries {
-  animation: apparition 400ms ease in;
+/***Animation coeur***/
+.iconLike {
+  border: none;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-end;
 }
+.iconLike .btn-like {
+  border: none;
+  background-color: rgb(246, 246, 246);
+  font-size: 3.8rem;
+  cursor: pointer;
+  margin-right: 4rem;
+}
+.iconLike .btn-like .fa-regular.fa-heart {
+  position: absolute;
+}
+.iconLike .btn-like .fa-solid.fa-heart {
+  opacity: 0;
+  transition: all 1.5s ease 0s;
+}
+.iconLike .btn-like .fa-solid.fa-heart:hover {
+  opacity: 1;
+  background: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  color: transparent;
+  z-index: 2;
+  position: relative;
+  bottom: 3px;
+}
+
 @keyframes apparition {
   0% {
     opacity: 0;
-    transform: translateY(0);
+    transform: translateY(50px);
   }
   100% {
     opacity: 1;
-    transform: translateY(1);
+    transform: translateY(0px);
   }
+}
+@keyframes coche {
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.entries {
+  animation: apparition 1s ease-in;
 }
 
 .plates {
-  animation: appariton 600ms ease in;
+  animation: apparition 2s ease-in;
 }
 
 .desserts {
-  animation: apparition 800ms ease in;
+  animation: apparition 3s ease-in;
 }
 
 .choice-your-meal {
@@ -119,6 +167,7 @@ header .homepage {
   cursor: pointer;
   text-align: left;
   padding: 0;
+  overflow: hidden;
 }
 .choice-your-meal h3 {
   font-size: 3rem;
@@ -130,12 +179,22 @@ header .homepage {
   font-size: 2.5rem;
   font-weight: normal;
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.choice-your-meal:hover .confirm-your-choice {
+  margin: 0;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
 .entrie-and-price,
 .plate-and-price,
 .dessert-and-price {
   display: flex;
+  justify-content: space-between;
+  overflow: hidden;
 }
 .entrie-and-price .entrieName,
 .entrie-and-price .plateName,
@@ -146,12 +205,13 @@ header .homepage {
 .dessert-and-price .entrieName,
 .dessert-and-price .plateName,
 .dessert-and-price .dessertName {
-  width: 75%;
+  width: 85%;
   margin-bottom: 2rem;
   margin-left: 2rem;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .entrie-and-price .price,
 .plate-and-price .price,
@@ -160,12 +220,12 @@ header .homepage {
   color: rgb(53, 53, 53);
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
+  align-items: flex-end;
+  margin-bottom: 2rem;
 }
 
 .confirm-your-choice {
-  display: none;
-  width: 15%;
+  width: 150px;
   display: flex;
   justify-content: center;
   background-color: var(--light-green);
@@ -174,9 +234,7 @@ header .homepage {
   font-weight: bold;
   align-items: center;
   border-radius: 0 50px 50px 0;
-}
-.confirm-your-choice :hover .fa-solid.fa-circle-check {
-  display: inline;
+  margin-right: -150px;
 }
 
 .buttonRestaurant {
@@ -192,7 +250,7 @@ header .homepage {
   box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.3);
   margin: 1rem 13rem 6rem;
 }
-.buttonRestaurant :hover {
+.buttonRestaurant:hover {
   box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.6);
   opacity: 0.8;
 }
