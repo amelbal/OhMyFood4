@@ -173,6 +173,9 @@ header .homepage {
   font-size: 3rem;
   font-family: "Roboto", sans-serif;
   margin: 1rem 0rem 1rem 0rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .choice-your-meal p {
   font-family: "Roboto", sans-serif;
@@ -208,8 +211,6 @@ header .homepage {
   width: 85%;
   margin-bottom: 2rem;
   margin-left: 2rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -286,6 +287,168 @@ header .homepage {
 .footer-info .fa-solid {
   color: white;
   padding-right: 2rem;
+}
+
+/*************MEDIA QUERIES***************/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  .main-container {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+  }
+  header {
+    gap: 18rem;
+  }
+  header .img {
+    width: 12rem;
+    height: 2.2rem;
+  }
+  .fa-solid.fa-arrow-left {
+    color: rgb(53, 53, 53);
+    font-size: 2em;
+  }
+  .background-img {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+  }
+  /**************SECTION_MENU************/
+  .menu-card {
+    margin-top: -100px;
+  }
+  .menu-card h1 {
+    font-size: 2rem;
+    font-weight: normal;
+  }
+  .menu-card h2 {
+    width: 6%;
+    font-size: 1.4rem;
+    border-width: 4px;
+  }
+  .menu-card .title-and-heart {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .menu-card .entries,
+  .menu-card .plates,
+  .menu-card .desserts {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: 1rem;
+    margin-bottom: 6rem;
+  }
+  .choice-your-meal {
+    width: 100%;
+    font-weight: bold;
+    font-size: 2.5rem;
+    border-radius: 25px;
+    box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
+    background-color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    overflow: hidden;
+  }
+  .choice-your-meal h3 {
+    font-size: 1.4rem;
+    font-family: "Roboto", sans-serif;
+    margin: 1rem 0rem 1rem 0rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .choice-your-meal p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3rem;
+    font-weight: normal;
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .choice-your-meal:hover .confirm-your-choice {
+    margin: 0;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  .entrie-and-price,
+  .plate-and-price,
+  .dessert-and-price {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  .entrie-and-price .entrieName,
+  .entrie-and-price .plateName,
+  .entrie-and-price .dessertName,
+  .plate-and-price .entrieName,
+  .plate-and-price .plateName,
+  .plate-and-price .dessertName,
+  .dessert-and-price .entrieName,
+  .dessert-and-price .plateName,
+  .dessert-and-price .dessertName {
+    width: 85%;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .entrie-and-price .price,
+  .plate-and-price .price,
+  .dessert-and-price .price {
+    width: 10%;
+    font-size: 1.4rem;
+    color: rgb(53, 53, 53);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+  }
+  .confirm-your-choice {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--light-green);
+    font-size: 4rem;
+    color: white;
+    font-weight: bold;
+    align-items: center;
+    border-radius: 0 50px 50px 0;
+    margin-right: -150px;
+  }
+  .buttonRestaurant {
+    width: 15.5rem;
+    height: 3.8rem;
+    font-size: 1rem;
+    margin: 0 37% 8% 37%;
+  }
+  .footer-info {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer-info img {
+    width: 6rem;
+    height: 1.2rem;
+    padding: 1rem 3rem;
+  }
+  .footer-info ul {
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 1rem;
+    padding: 0rem 0rem 4rem 4rem;
+    margin-bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=style-restaurant.css.map */

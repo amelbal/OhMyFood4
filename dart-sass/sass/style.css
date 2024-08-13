@@ -18,48 +18,8 @@ body {
 .main-container {
   box-sizing: border-box;
   width: 100%;
-}
-
-svg {
-  font-family: "Roboto", sans-serif;
-  width: 100%;
-  height: 100%;
-}
-
-svg text {
-  animation: stroke 5s infinite alternate;
-  stroke-width: 2;
-  stroke: #9356DC;
-  font-size: 100px;
-}
-
-@keyframes stroke {
-  0% {
-    fill: rgba(255, 121, 218, 0);
-    stroke: rgb(147, 86, 220);
-    stroke-dashoffset: 25%;
-    stroke-dasharray: 0 50%;
-    stroke-width: 2;
-  }
-  70% {
-    fill: rgba(255, 121, 218, 0);
-    stroke: rgb(147, 86, 220);
-  }
-  80% {
-    fill: rgba(255, 121, 218, 0);
-    stroke: rgb(147, 86, 220);
-    stroke-width: 3;
-  }
-  100% {
-    fill: rgb(255, 121, 218);
-    stroke: rgba(147, 86, 220, 0);
-    stroke-dashoffset: -25%;
-    stroke-dasharray: 50% 0;
-    stroke-width: 0;
-  }
-}
-.wrapper {
-  background-color: #F6F6F6;
+  padding: 0 50px;
+  box-sizing: border-box;
 }
 
 header {
@@ -200,8 +160,11 @@ header .img {
 }
 
 .restaurant {
-  background-color: #f8f8f8;
+  background-color: #f6f6f6;
   margin-top: 8rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
 .restaurant h1 {
@@ -250,6 +213,10 @@ header .img {
   display: flex;
   width: 100%;
   height: 30%;
+}
+
+.card-text {
+  width: 70%;
 }
 
 .restaurant-cards .card {
@@ -348,6 +315,179 @@ header .img {
 .footer-info .fa-solid {
   color: white;
   padding-right: 2rem;
+}
+
+/*************MEDIA QUERIES***************/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  .main-container {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+  }
+  header img {
+    width: 12rem;
+  }
+  .search-bar {
+    height: 3rem;
+  }
+  .myform {
+    margin-left: 4.2rem;
+  }
+  .myform .location {
+    font-size: 1rem;
+    color: var(--text-color-grey);
+  }
+  .myform .fa-location-dot {
+    font-size: 1rem;
+  }
+  .restaurant-search {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  .restaurant-search h1 {
+    font-size: 2.4rem;
+    margin: 6rem 9rem 2rem;
+  }
+  .restaurant-search p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .buttonRestaurant {
+    height: 3.8rem;
+    width: 15.5rem;
+    font-size: 1rem;
+  }
+  .different-steps h1 {
+    font-size: 1.6rem;
+    margin-top: 4rem;
+    margin-left: 3rem;
+  }
+  .buttonSteps {
+    margin-left: 3.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .btn-step {
+    width: 18rem;
+    height: 4rem;
+    font-size: 1rem;
+    border-radius: 20px;
+  }
+  .fa-solid.fa-mobile-screen-button,
+  .fa-solid.fa-list,
+  .fa-solid.fa-store {
+    font-size: 1.2rem;
+    margin-right: 1.2rem;
+    margin-left: 2rem;
+  }
+  .numberBadge {
+    font-size: 0.8rem;
+    padding: 3px;
+    border-radius: 100px;
+    width: 23px;
+    right: 270px;
+  }
+  .restaurant h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin: 0 0 0 0;
+    padding: 3rem 0rem 0rem 0rem;
+  }
+  .restaurant,
+  .restaurant-cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  .restaurant-cards .card {
+    width: 30rem;
+    height: 16rem;
+    border-radius: 20px;
+  }
+  .newBadge {
+    top: 1rem;
+    right: 1rem;
+    font-size: 1rem;
+    width: 4rem;
+    height: 1rem;
+    padding: 0.5rem;
+    font-weight: 450;
+  }
+  .card-content {
+    display: flex;
+    width: 100%;
+    height: 30%;
+  }
+  .card-text {
+    width: 70%;
+  }
+  .restaurant-cards img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .restaurant h2,
+  .restaurant p {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    margin-bottom: 0rem;
+  }
+  .iconLike .btn-like {
+    font-size: 2rem;
+    margin-right: 2rem;
+  }
+  .iconLike .btn-like .fa-regular.fa-heart {
+    position: absolute;
+  }
+  .fa-solid.fa-heart {
+    opacity: 0;
+    transition: all 1.5s ease 0s;
+  }
+  .fa-solid.fa-heart:hover {
+    opacity: 1;
+    background: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    color: transparent;
+    z-index: 2;
+    position: relative;
+    bottom: 3px;
+  }
+  .footer-info {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer-info img {
+    width: 6rem;
+    height: 1.2rem;
+    padding: 1rem 3rem;
+  }
+  .footer-info ul {
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 1rem;
+    padding: 0rem 0rem 4rem 4rem;
+    margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 1224px) {
+  /******Header*********/
+  body {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
