@@ -15,7 +15,7 @@ $btn-gradiant: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 
 @mixin title-style {
-  font-size: 4rem;
+  font-size: 24px;
   font-family: $font-family-general;
 }
 
@@ -26,9 +26,8 @@ $btn-gradiant: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 
 @mixin btn-style {
   text-align: center;
-  height: 9rem;
-  width: 35rem;
-  font-size: 2.5rem;
+  padding: 16px 20px;
+  font-size: 16px;
   color: white;
   background: $btn-gradiant;
   border-radius: 100px;
@@ -55,28 +54,30 @@ body {
 .main-container {
   box-sizing: border-box;
   width: 100%;
-  padding: 0 50px;
-  box-sizing: border-box;
 }
 
 
 
 header {
+  width: 100%;
   @include display-style;
   flex-direction: column;
-  margin-top: 3rem;
 
-  & .img {
+  & img {
     @include display-style;
     align-items: center;
-    margin-bottom: 4rem;
+    width: 50%;
+    margin: auto;
   }
 }
 
 .search-bar {
   font-family: $font-family-general;
   @include display-style;
-  height: 8.5rem;
+  justify-content: center;
+  margin-top: 6%;
+  width: 100%;
+  height: 50px;
   background-color: #EAEAEA;
   box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
 }
@@ -84,24 +85,23 @@ header {
 .myform {
   display: flex;
   align-items: center;
-  margin-left: 11rem;
-
-
+  gap: 4%;
+  padding-left: 14%;
 
   & .location {
     font-family: $font-family-general;
-    font-size: 2.5rem;
+    font-size: 16px;
     font-weight: bold;
     background-color: #EAEAEA;
-    color: var(text-color-grey);
+    color: var(--text-color-grey);
     border: none;
-    margin-left: 1rem;
+
   }
 
 
 
   & .fa-location-dot {
-    font-size: 2.5rem;
+    font-size: 16px;
     color: var(--text-color-grey);
   }
 }
@@ -110,22 +110,21 @@ header {
 .restaurant-search {
   text-align: center;
   background-color: var(--main-bg-color);
-  padding-top: 0.2rem;
-  padding-bottom: 8rem;
+  padding: 10% 0% 12% 0%;
 
 
 
   & h1 {
     @include title-style;
-    margin: 6rem 9rem 3rem;
+    margin: 0;
   }
 
 
   & p {
     font-family: $font-family-general;
-    font-size: 2rem;
+    font-size: 18px;
     color: var(--text-color-grey);
-    margin-bottom: 4rem;
+    margin-bottom: 24px;
   }
 }
 
@@ -134,19 +133,21 @@ header {
 }
 
 .different-steps {
+  margin-bottom: 18%;
 
   & h1 {
-    margin-top: 6rem;
-    margin-left: 3rem;
+    margin-top: 12%;
+    padding-left: 4%;
     @include title-style;
   }
 }
 
 .buttonSteps {
-  margin-left: 5rem;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 25px;
 
 }
 
@@ -154,12 +155,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 52rem;
-  height: 12rem;
-  text-align: center;
+  width: 322px;
+  height: 72px;
   font-weight: bold;
-  font-size: 2.5rem;
-  border-radius: 50px;
+  font-size: 16px;
+  border-radius: 20px;
   background-color: var(--main-bg-color);
   box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.15);
   border: none;
@@ -169,37 +169,38 @@ header {
 
 .numberBadge {
 
-  position: relative;
-  font-size: 2.2rem;
+  position: absolute;
+  font-size: 16px;
   font-weight: normal;
   line-height: 20px;
   color: white;
   background-color: var(--main-color);
-  padding: 20px;
+  padding: 3px;
   border-radius: 100px;
   width: 20px;
-  right: 680px;
+  left: 4%;
+  ;
 
 
 }
 
 .fa-solid.fa-mobile-screen-button {
   color: rgba(126, 126, 126, 1);
-  font-size: 3rem;
-  margin-right: 2.8rem;
+  font-size: 18px;
+  margin-right: 4%;
 }
 
 
 .fa-solid.fa-list {
   color: rgba(126, 126, 126, 1);
-  font-size: 3rem;
-  margin-right: 3.8rem;
+  font-size: 18px;
+  margin-right: 6%;
 }
 
 .fa-solid.fa-store {
   color: var(--main-color);
-  font-size: 3rem;
-  margin-right: 3rem;
+  font-size: 18px;
+  margin-right: 5%;
 }
 
 .restaurant {
@@ -213,9 +214,8 @@ header {
 
 .restaurant h1 {
   @include title-style;
-  margin-top: 12rem;
-  padding-top: 8rem;
-  margin-left: 3rem;
+  padding-top: 4%;
+  padding-left: 4%;
   margin-bottom: 0rem;
 }
 
@@ -237,42 +237,37 @@ header {
   width: 100%;
   box-sizing: border-box;
   background-color: var(--main-bg-color);
-  padding-bottom: 12rem;
-
+  padding-bottom: 20%;
 }
 
 .newBadge {
   position: absolute;
-  top: 4rem;
-  right: 4rem;
-  font-size: 2.5rem;
-  font-weight: bold;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+  font-weight: 500;
   font-family: $font-family-general;
   color: rgba(0, 135, 102, 1);
   text-align: center;
-  background-size: 5rem 2rem;
   background-color: var(--light-green);
   border-radius: 4px;
-  padding: 1rem;
+  padding: 8px 12px 8px 12px;
 
 }
 
 .card-content {
   display: flex;
-  width: 100%;
+  justify-content: space-between;
+  padding-right: 15px;
   height: 30%;
 }
 
-.card-text {
-  width: 70%;
-}
-
 .restaurant-cards .card {
-  width: 55rem;
-  height: 41rem;
+  width: 340px;
+  height: 250px;
   background-color: white;
-  border-radius: 50px;
-  margin: 3rem;
+  border-radius: 15px;
+  margin: 1rem 1rem 0 1rem;
   margin-bottom: 0px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
@@ -282,40 +277,35 @@ header {
   width: 100%;
   height: 70%;
   object-fit: cover;
-  border-radius: 50px 50px 0px 0px;
+  border-radius: 15px 15px 0px 0px;
 }
 
 .restaurant h2 {
   font-family: $font-family-general;
-  font-size: 3.1rem;
+  font-size: 18px;
   color: black;
-  margin-left: 2rem;
-  margin-bottom: 0.5rem;
+  padding: 12px 0 0 18px;
+  margin: 0;
 }
 
 .restaurant p {
   font-family: $font-family-general;
-  font-size: 3rem;
+  font-size: 17px;
   color: var(--text-color-grey);
-  margin-left: 2rem;
-  margin-top: 0rem;
+  padding: 0px 0px 0px 18px;
+  margin: 0;
 }
 
 .iconLike {
-  width: 50%;
   border: none;
   display: flex;
-  align-content: center;
   align-items: center;
-  justify-content: flex-end;
 
   & .btn-like {
     border: none;
     background-color: white;
-    font-size: 3.8rem;
+    font-size: 24px;
     cursor: pointer;
-    margin-right: 4rem;
-
 
 
     & .fa-regular.fa-heart {
@@ -323,7 +313,6 @@ header {
       position: absolute;
 
     }
-
 
     & .fa-solid.fa-heart {
       opacity: 0;
@@ -339,7 +328,7 @@ header {
         color: transparent;
         z-index: 2;
         position: relative;
-        bottom: 3px;
+        bottom: 1px;
 
       }
 
@@ -356,10 +345,9 @@ header {
   background-color: var(--text-color-grey);
 
   img {
-    width: 16rem;
+    height: 18px;
     filter: brightness(100);
-    font-size: 4rem;
-    padding: 4rem 4rem 0rem;
+    padding: 8% 0 0 6%;
   }
 
 }
@@ -367,10 +355,10 @@ header {
 .footer-info ul {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  font-size: 2.4rem;
+  gap: 6px;
+  font-size: 16px;
   list-style-type: none;
-  padding: 0rem 0rem 4rem 4rem;
+  padding: 0 0 6% 6%;
   margin-bottom: 0;
 
 }
@@ -383,7 +371,7 @@ header {
 
 .footer-info .fa-solid {
   color: white;
-  padding-right: 2rem;
+  padding-right: 10px;
 
 }
 
@@ -393,133 +381,54 @@ header {
 /*************MEDIA QUERIES***************/
 
 /* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
+@media (min-width: 768px) {
 
-
-
-  body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-
-  }
-
-  .main-container {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0;
-
-  }
 
   header img {
-    width: 12rem;
-  }
-
-
-  .search-bar {
-
-    height: 3rem;
-
+    width: 192px;
   }
 
   .myform {
-
-    margin-left: 4.2rem;
-
-
-
-    & .location {
-
-      font-size: 1rem;
-      color: var(--text-color-grey);
-
-    }
-
-
-
-    & .fa-location-dot {
-      font-size: 1rem;
-
-    }
+    padding-right: 7%;
   }
 
   .restaurant-search {
     text-align: center;
-    padding-bottom: 2rem;
-
-
-
-    & h1 {
-      font-size: 2.4rem;
-      margin: 6rem 9rem 2rem;
-    }
-
-
-    & p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-  }
-
-  .buttonRestaurant {
-    height: 3.8rem;
-    width: 15.5rem;
-    font-size: 1rem;
+    padding: 8% 0 6% 0;
   }
 
   .different-steps {
 
-
     & h1 {
-      font-size: 1.6rem;
-      margin-top: 4rem;
-      margin-left: 3rem;
-
+      display: flex;
+      justify-content: center;
+      margin-top: 8%;
     }
+
   }
 
   .buttonSteps {
-    margin-left: 3.5rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 2rem;
-
-  }
-
-  .btn-step {
-    width: 18rem;
-    height: 4rem;
-    font-size: 1rem;
-    border-radius: 20px;
-
-  }
-
-  .fa-solid.fa-mobile-screen-button,
-  .fa-solid.fa-list,
-  .fa-solid.fa-store {
-
-    font-size: 1.2rem;
-    margin-right: 1.2rem;
-    margin-left: 2rem;
+    margin-top: 6%;
 
   }
 
   .numberBadge {
+    left: 27%;
+  }
 
-    font-size: 0.8rem;
-    padding: 3px;
-    border-radius: 100px;
-    width: 23px;
-    right: 270px;
+  .different-steps {
+    margin-bottom: 10%;
   }
 
   .restaurant h1 {
+
     width: 100%;
     display: flex;
     justify-content: center;
-    font-size: 1.6rem;
-    margin: 0 0 0 0;
-    padding: 3rem 0rem 0rem 0rem;
+    padding: 4% 0 4% 0%;
 
   }
 
@@ -532,102 +441,24 @@ header {
   }
 
   .restaurant-cards .card {
-    width: 30rem;
-    height: 16rem;
-    border-radius: 20px;
+    width: 450px;
   }
 
-
-  .newBadge {
-    top: 1rem;
-    right: 1rem;
-    font-size: 1rem;
-    width: 4rem;
-    height: 1rem;
-    padding: 0.5rem;
-    font-weight: 450;
-  }
-
-  .card-content {
-    display: flex;
-    width: 100%;
-    height: 30%;
-  }
-
-  .card-text {
-    width: 70%;
-  }
-
-
-
-  .restaurant-cards img {
-    width: 100%;
-    height: 70%;
-    object-fit: cover;
-    border-radius: 20px 20px 0px 0px;
-  }
-
-  .restaurant h2,
-  .restaurant p {
-    font-size: 1.2rem;
-    margin-left: 1rem;
-    margin-bottom: 0rem;
-  }
-
-  .iconLike {
-    & .btn-like {
-      font-size: 2rem;
-      margin-right: 2rem;
-
-
-      & .fa-regular.fa-heart {
-        position: absolute;
-
-      }
-    }
-  }
-
-  .fa-solid.fa-heart {
-    opacity: 0;
-    transition: all 1.5s ease 0s;
-
-
-
-    &:hover {
-      opacity: 1;
-      background: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
-      background-clip: border-box;
-      -webkit-background-clip: text;
-      color: transparent;
-      z-index: 2;
-      position: relative;
-      bottom: 3px;
-
-    }
-
-  }
-
-  .footer-info {
-    display: flex;
-    flex-direction: row;
-
-    & img {
-
-      width: 6rem;
-      height: 1.2rem;
-      padding: 1rem 3rem;
-    }
+  .restaurant-cards {
+    padding-bottom: 10%;
   }
 
   .footer-info ul {
     flex-direction: row;
-    gap: 1rem;
-    font-size: 1rem;
-    padding: 0rem 0rem 4rem 4rem;
+    gap: 10px;
     margin-bottom: 0;
+    padding-left: 10%;
+
   }
 
-
+  .footer-info img {
+    padding-left: 10%;
+  }
 }
 
 
