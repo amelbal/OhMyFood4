@@ -59,15 +59,18 @@ body {
 
 
 header {
-  width: 100%;
+
   @include display-style;
   flex-direction: column;
 
-  & img {
+  & .logo {
     @include display-style;
-    align-items: center;
-    width: 50%;
-    margin: auto;
+
+    & img {
+      width: 200px;
+      height: 36px;
+
+    }
   }
 }
 
@@ -169,7 +172,7 @@ header {
 
 .numberBadge {
 
-  position: absolute;
+  position: relative;
   font-size: 16px;
   font-weight: normal;
   line-height: 20px;
@@ -178,7 +181,7 @@ header {
   padding: 3px;
   border-radius: 100px;
   width: 20px;
-  left: 4%;
+  right: 85%;
   ;
 
 
@@ -238,6 +241,7 @@ header {
   box-sizing: border-box;
   background-color: var(--main-bg-color);
   padding-bottom: 20%;
+  align-items: center;
 }
 
 .newBadge {
@@ -384,10 +388,6 @@ header {
 @media (min-width: 768px) {
 
 
-  header img {
-    width: 192px;
-  }
-
   .myform {
     padding-right: 7%;
   }
@@ -415,9 +415,6 @@ header {
 
   }
 
-  .numberBadge {
-    left: 27%;
-  }
 
   .different-steps {
     margin-bottom: 10%;
@@ -464,8 +461,6 @@ header {
 
 @media only screen and (min-width : 1224px) {
 
-  /******Header*********/
-
 
   body {
     @include display-style;
@@ -473,5 +468,82 @@ header {
     margin: 0;
   }
 
+  .search-bar {
+    margin-top: 50px;
+    box-shadow: none;
+  }
+
+  .myform {
+    padding: 0;
+    margin-left: 50px;
+  }
+
+  .restaurant-search {
+    padding: 30px 0 30px 0;
+
+    & h1 {
+      font-size: 40px;
+    }
+  }
+
+  .different-steps {
+    margin-bottom: 70px;
+
+    & h1 {
+      position: relative;
+      right: 440px;
+      margin-top: 50px;
+    }
+  }
+
+  .btn-step {
+    width: 305px;
+  }
+
+  .numberBadge {
+    right: 88%;
+  }
+
+  .buttonSteps {
+    margin-top: 0;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .restaurant {
+    margin-top: 0;
+
+    & .restaurant-cards {
+      flex-direction: row;
+      justify-content: center;
+      gap: 5%;
+    }
+  }
+
+  .restaurant h1 {
+    padding: 20px 0 30px 0;
+    right: 435px;
+    position: relative;
+
+  }
+
+  .footer-info {
+    display: flex;
+    justify-content: flex-end;
+    height: 114px;
+    align-items: center;
+    gap: 5%;
+
+    & img {
+      order: 2;
+      padding: 0;
+      margin-right: 50px;
+    }
+
+    & ul {
+      padding: 0;
+      margin: 0;
+    }
+  }
 
 }

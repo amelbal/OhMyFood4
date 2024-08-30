@@ -22,18 +22,20 @@ body {
 
 header {
   display: flex;
-  gap: 9%;
-  margin-top: 6%;
-  margin-bottom: 4%;
+  margin-top: 30PX;
+  margin-bottom: 20PX;
 }
-header .img {
+header .logo {
+  width: 100%;
   display: flex;
   justify-content: center;
-  height: 35px;
+}
+header img {
+  width: 162px;
 }
 header .homepage {
   border: none;
-  margin-left: 4%;
+  margin-left: 20px;
   background-color: white;
   cursor: pointer;
 }
@@ -70,7 +72,7 @@ header .homepage {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: normal;
-  margin-left: 4%;
+  margin-left: 12px;
   border-bottom-style: solid;
   border-color: rgb(153, 226, 208);
   border-width: 4px;
@@ -85,7 +87,7 @@ header .homepage {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 0% 3% 8% 3%;
+  padding: 0px 12px 24px 12px;
 }
 
 /***Animation coeur***/
@@ -204,21 +206,21 @@ header .homepage {
 .dessert-and-price .plateName,
 .dessert-and-price .dessertName {
   width: 85%;
-  margin-bottom: 4%;
-  margin-left: 4%;
+  margin-bottom: 10PX;
+  margin-left: 10PX;
   overflow: hidden;
   white-space: nowrap;
 }
 .entrie-and-price .price,
 .plate-and-price .price,
 .dessert-and-price .price {
-  width: 10%;
+  margin-right: 10px;
   font-size: 15px;
   color: rgb(53, 53, 53);
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
-  margin-bottom: 4%;
+  margin-bottom: 10px;
 }
 
 .confirm-your-choice {
@@ -233,6 +235,12 @@ header .homepage {
   margin-right: -70px;
 }
 
+.btn-restaurant {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 .buttonRestaurant {
   text-align: center;
   font-size: 16px;
@@ -244,7 +252,11 @@ header .homepage {
   box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.3);
   width: 186px;
   height: 50px;
-  margin: 4% 25% 10% 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 40px;
 }
 .buttonRestaurant:hover {
   box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.6);
@@ -259,6 +271,7 @@ header .homepage {
 .footer-info img {
   height: 18px;
   padding: 6%;
+  filter: brightness(100);
 }
 
 .footer-info ul {
@@ -284,9 +297,6 @@ header .homepage {
 /*************MEDIA QUERIES***************/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (min-width: 768px) {
-  header {
-    gap: 28%;
-  }
   .background-img {
     height: 300px;
   }
@@ -315,17 +325,11 @@ header .homepage {
   .desserts .entrieName,
   .desserts .plateName,
   .desserts .dessertName {
-    margin-bottom: 2%;
-  }
-  .price {
-    margin-bottom: 2%;
+    margin-bottom: 10px;
   }
   .confirm-your-choice {
-    width: 100px;
-    margin-right: -100px;
-  }
-  .buttonRestaurant {
-    margin: 0% 0% 8% 38%;
+    width: 70px;
+    margin-right: -70px;
   }
   .footer-info ul {
     flex-direction: row;
@@ -340,6 +344,38 @@ header .homepage {
   }
   .footer-info .fa-solid {
     padding: 0;
+  }
+}
+@media (min-width: 1224px) {
+  header {
+    width: 100%;
+    gap: 0;
+  }
+  header .homepage {
+    margin-left: 6px;
+  }
+  header .img {
+    width: 100%;
+  }
+  .menu-card {
+    width: 85%;
+    margin: -50px auto 0 auto;
+  }
+  .footer-info {
+    display: flex;
+    justify-content: flex-end;
+    height: 114px;
+    align-items: center;
+    gap: 5%;
+  }
+  .footer-info img {
+    order: 2;
+    padding: 0;
+    margin-right: 50px;
+  }
+  .footer-info ul {
+    padding: 0;
+    margin: 0;
   }
 }
 
