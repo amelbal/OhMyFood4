@@ -68,7 +68,7 @@ header .homepage {
   margin-left: 4%;
 }
 .menu-card h2 {
-  width: 11%;
+  width: 40px;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: normal;
@@ -270,7 +270,7 @@ header .homepage {
 
 .footer-info img {
   height: 18px;
-  padding: 6%;
+  padding: 25px;
   filter: brightness(100);
 }
 
@@ -279,8 +279,9 @@ header .homepage {
   flex-direction: column;
   gap: 6px;
   list-style-type: none;
-  padding-left: 6%;
-  margin: 0%;
+  padding-left: 25px;
+  padding-bottom: 25px;
+  margin: 0;
 }
 
 .footer-info a {
@@ -306,9 +307,6 @@ header .homepage {
   }
   .menu-card .title-and-heart {
     justify-content: center;
-  }
-  .menu-card h2 {
-    width: 6%;
   }
   .entries,
   .plates,
