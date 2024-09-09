@@ -102,6 +102,7 @@ header .homepage {
   border: none;
   background-color: rgb(246, 246, 246);
   font-size: 28px;
+  color: black;
   cursor: pointer;
 }
 .iconLike .btn-like .fa-regular.fa-heart {
@@ -119,7 +120,7 @@ header .homepage {
   color: transparent;
   z-index: 2;
   position: relative;
-  bottom: 2px;
+  bottom: 0.6px;
 }
 
 @keyframes apparition {
@@ -215,7 +216,7 @@ header .homepage {
 .plate-and-price .price,
 .dessert-and-price .price {
   margin-right: 10px;
-  font-size: 15px;
+  font-size: 17px;
   color: rgb(53, 53, 53);
   display: flex;
   flex-wrap: wrap;
@@ -348,12 +349,6 @@ header .homepage {
   header {
     width: 100%;
     gap: 0;
-  }
-  header .homepage {
-    margin-left: 6px;
-  }
-  header .img {
-    width: 100%;
   }
   .menu-card {
     width: 85%;

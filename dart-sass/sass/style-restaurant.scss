@@ -136,7 +136,7 @@ header {
     & .entries,
     .plates,
     .desserts {
- 
+
         display: flex;
         flex-direction: column;
         gap: 12px;
@@ -157,6 +157,7 @@ header {
         border: none;
         background-color: rgb(246, 246, 246);
         font-size: 28px;
+        color: black;
         cursor: pointer;
 
         & .fa-regular.fa-heart {
@@ -175,7 +176,7 @@ header {
                 color: transparent;
                 z-index: 2;
                 position: relative;
-                bottom: 2px;
+                bottom: 0.6px;
             }
         }
     }
@@ -285,7 +286,7 @@ header {
 
     & .price {
         margin-right: 10px;
-        font-size: 15px;
+        font-size: 17px;
         color: rgba(53, 53, 53, 1);
         display: flex;
         flex-wrap: wrap;
@@ -307,11 +308,13 @@ header {
     margin-right: -70px;
 
 }
+
 .btn-restaurant {
     display: flex;
     width: 100%;
     justify-content: center
 }
+
 .buttonRestaurant {
     @include btn-style;
     width: 186px;
@@ -425,20 +428,11 @@ header {
 @media (min-width : 1224px) {
 
 
-
     header {
         width: 100%;
         gap: 0;
-
-        & .homepage {
-            margin-left: 6px;
-
-        }
     }
 
-    header .img {
-        width: 100%;
-    }
 
     .menu-card {
         width: 85%;
@@ -451,17 +445,17 @@ header {
         height: 114px;
         align-items: center;
         gap: 5%;
-    
+
         & img {
-          order: 2;
-          padding: 0;
-          margin-right: 50px;
+            order: 2;
+            padding: 0;
+            margin-right: 50px;
         }
-    
+
         & ul {
-          padding: 0;
-          margin: 0;
+            padding: 0;
+            margin: 0;
         }
-      }
+    }
 
 }
